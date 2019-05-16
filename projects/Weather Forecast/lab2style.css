@@ -1,0 +1,1327 @@
+/* Global */
+body {
+	background-image: url("rainbow-weather2.jpg"); /*http://www.telezones.com/wp-content/uploads/2015/01/weather-hd-327224.jpg*/
+	/* background-color: #5DADE2; */
+	background-size: 100% auto;
+	background-repeat: repeat;
+}
+
+header {
+	border-style: solid;
+	background-color: white;
+}
+
+section {
+	border-style: solid;
+	background-color: #BDBDBD;
+	opacity: 0.95;
+}																														
+	
+h1, h2, h3, h4, h5 {
+	text-align: center;
+}
+
+form {
+	padding-left: 1%;		
+}
+
+input {
+	height: 20px;
+	width: 200px;
+}
+
+button {
+	height: 26px;
+}
+
+.left {
+	text-align: left;
+	padding-left: 1%;
+}
+
+.center {
+	text-align: center;
+}
+
+@media (min-width: 480px) {					/* 480px */
+	#searchbar {
+		display: inline-block;
+	}
+	#clock {
+		display: inline-block;
+		float: right;
+		margin-right: 2%;
+	}
+
+	#currentweather {
+		margin: auto;
+		width: 99%;
+		/* order: 1; */
+	}
+	#fivedayforecast {
+		margin: auto;
+		width: 99%;
+		/* order: 3; */
+	}
+	#hourly {
+		margin: auto;
+		width: 99%;
+		/* order: 2; */
+	}
+	
+	/*CURRENT*/
+	#cityname {
+		text-align: center;
+		font-weight: bold;
+	}
+	#temperature {
+		text-align: center;
+	}
+	#condition {
+		text-align: center;
+	}
+	#wind {
+		text-align: center;
+		padding-left: 2%;
+	}
+	#humidity {
+		text-align: center;
+		padding-left: 2%;
+	}
+	
+	/*TOMORROW*/
+	#tomorrow {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#tomorrowlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#tomorrowinfo {
+		float: left;
+		width: 10%;
+		padding-left: 10%;
+		text-align: center;
+	}
+	#tomorrowcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#tomorrowicon {
+		/* float: left; */
+		/* text-align: center; */
+	}
+	#tomorrowspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#tomorrowminmax {
+		clear: both;
+		padding-left: 1%;
+	}
+	#tomorrowhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+		/*DAY 2*/
+	#daytwo {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daytwolabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daytwoinfo {
+		float: left;
+		width: 10%;
+		padding-left: 10%;
+		text-align: center;
+	}
+	#daytwocondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#daytwoicon {
+		
+	}
+	#daytwospeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daytwominmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daytwohumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 3*/
+	#daythree {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daythreelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daythreeinfo {
+		float: left;
+		width: 10%;
+		padding-left: 10%;
+		text-align: center;
+	}
+	#daythreecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#daythreeicon {
+		
+	}
+	#daythreespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daythreeminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daythreehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 4*/
+	#dayfour {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfourlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfourinfo {
+		float: left;
+		width: 10%;
+		padding-left: 10%;
+		text-align: center;
+	}
+	#dayfourcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#dayfouricon {
+		
+	}
+	#dayfourspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfourminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfourhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 5*/
+	#dayfive {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfivelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfiveinfo {
+		float: left;
+		width: 10%;
+		padding-left: 10%;
+		text-align: center;
+	}
+	#dayfivecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#dayfiveicon {
+		
+	}
+	#dayfivespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfiveminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfivehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	/*HOURLY*/
+	#time0 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		border-bottom: 10px solid #BDBDBD;
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+	}
+	#time1 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		border-bottom: 10px solid #BDBDBD;
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+	}
+	#time2 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		border-bottom: 10px solid #BDBDBD;
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+	}
+	#time3 {
+		/* border-style: solid; */
+		/* border-right: 1px solid white; */
+		border-bottom: 10px solid #BDBDBD;
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+	}
+	#time4 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+	}
+	#time5 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+	}
+	#time6 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+	}
+	#time7 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+	}
+	#time8{
+		/* border-style: solid; */
+		display: inline-block;
+		width: 19%;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1024px) {					/* 1024px */
+	/* 	main {
+		display: flex;
+		flex-flow: row wrap;
+	} */
+
+	#searchbar {
+		display: inline-block;
+	}
+	#clock {
+		display: inline-block;
+		float: right;
+		margin-right: 2%;
+	}
+
+	#currentweather {
+		margin: auto;
+		width: 90%;
+		/* order: 1; */
+	}
+	#fivedayforecast {
+		margin: auto;
+		width: 90%;
+		/* order: 3; */
+	}
+	#hourly {
+		margin: auto;
+		width: 90%;
+		/* order: 2; */
+	}
+	
+	/*CURRENT*/
+	#cityname {
+		text-align: center;
+		font-weight: bold;
+	}
+	#temperature {
+		text-align: center;
+	}
+	#condition {
+		text-align: center;
+	}
+	#wind {
+		text-align: center;
+		padding-left: 2%;
+	}
+	#humidity {
+		text-align: center;
+		padding-left: 2%;
+	}
+	
+	/*TOMORROW*/
+	#tomorrow {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#tomorrowlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#tomorrowinfo {
+		float: left;
+		width: 10%;
+		padding-left: 0%;
+		text-align: center;
+	}
+	#tomorrowcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#tomorrowicon {
+		/* float: left; */
+		/* text-align: center; */
+	}
+	#tomorrowspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#tomorrowminmax {
+		clear: both;
+		padding-left: 1%;
+	}
+	#tomorrowhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+		/*DAY 2*/
+	#daytwo {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daytwolabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daytwoinfo {
+		float: left;
+		width: 10%;
+		padding-left: 0%;
+		text-align: center;
+	}
+	#daytwocondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#daytwoicon {
+		
+	}
+	#daytwospeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daytwominmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daytwohumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 3*/
+	#daythree {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daythreelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daythreeinfo {
+		float: left;
+		width: 10%;
+		padding-left: 0%;
+		text-align: center;
+	}
+	#daythreecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#daythreeicon {
+		
+	}
+	#daythreespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daythreeminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daythreehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 4*/
+	#dayfour {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfourlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfourinfo {
+		float: left;
+		width: 10%;
+		padding-left: 0%;
+		text-align: center;
+	}
+	#dayfourcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#dayfouricon {
+		
+	}
+	#dayfourspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfourminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfourhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 5*/
+	#dayfive {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfivelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfiveinfo {
+		float: left;
+		width: 10%;
+		padding-left: 0%;
+		text-align: center;
+	}
+	#dayfivecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 20%;
+	}
+	#dayfiveicon {
+		
+	}
+	#dayfivespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfiveminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfivehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	/*HOURLY*/
+	#time0 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		/* 	padding-left: 0.18%; */
+		width: 10.5%;
+		text-align: center;
+	}
+	#time1 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time2 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time3 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time4 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time5 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time6 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time7 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time8{
+		/* border-style: solid; */
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1600px) {					/*1600px*/
+	#searchbar {
+		display: inline-block;
+	}
+	#clock {
+		display: inline-block;
+		float: right;
+		margin-right: 2%;
+	}	
+
+	#currentweather {
+		float: left;
+		width: 30%;
+		margin-left: 10%;
+	}
+	#fivedayforecast {
+		float: right;
+		width: 40%;
+		margin-right: 10%;
+	}
+	#hourly {
+		float: left;
+		width: 46%;
+		margin-left: 2%;
+		margin-top: 3%;
+	}
+
+	/*CURRENT*/
+	#cityname {
+		text-align: center;
+		font-weight: bold;
+	}
+	#temperature {
+		text-align: center;
+	}
+	#condition {
+		text-align: center;
+	}
+	#wind {
+		text-align: left;
+		padding-left: 2%;
+	}
+	#humidity {
+		padding-left: 2%;
+		text-align: left;
+	}
+
+	/*TOMORROW*/
+	#tomorrow {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#tomorrowlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#tomorrowinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#tomorrowcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 10%;
+	}
+	#tomorrowicon {
+		/* float: left; */
+		/* text-align: center; */
+	}
+	#tomorrowspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#tomorrowminmax {
+		clear: both;
+		padding-left: 1%;
+	}
+	#tomorrowhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 2*/
+	#daytwo {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daytwolabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daytwoinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#daytwocondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 10%;
+	}
+	#daytwoicon {
+		
+	}
+	#daytwospeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daytwominmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daytwohumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 3*/
+	#daythree {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daythreelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daythreeinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#daythreecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 10%;
+	}
+	#daythreeicon {
+		
+	}
+	#daythreespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daythreeminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daythreehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 4*/
+	#dayfour {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfourlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfourinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#dayfourcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 10%;
+	}
+	#dayfouricon {
+		
+	}
+	#dayfourspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfourminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfourhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 5*/
+	#dayfive {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfivelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfiveinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#dayfivecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 10%;
+	}
+	#dayfiveicon {
+		
+	}
+	#dayfivespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfiveminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfivehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	/*HOURLY*/
+	#time0 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		/* 	padding-left: 0.18%; */
+		width: 10.5%;
+		text-align: center;
+	}
+	#time1 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time2 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time3 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time4 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time5 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time6 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time7 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+	#time8{
+		/* border-style: solid; */
+		display: inline-block;
+		width: 10.5%;
+		text-align: center;
+	}
+}
+
+@media (min-width:1920px) {					/*1920px*/
+	/* IDs */
+	#searchbar {
+		display: inline-block;
+	}
+	#clock {
+		display: inline-block;
+		float: right;
+		margin-right: 2%;
+	}
+
+	#currentweather {
+		float: left;
+		width: 30%;
+		margin-left: 10%;
+	}
+	#fivedayforecast {
+		float: right;
+		width: 35%;
+		margin-right: 10%;
+	}
+	#hourly {
+		float: left;
+		width: 46%;
+		margin-left: 2%;
+		margin-top: 3%;
+	}
+
+	/*CURRENT*/
+	#cityname {
+		text-align: center;
+		font-weight: bold;
+	}
+	#temperature {
+		text-align: center;
+	}
+	#condition {
+		text-align: center;
+	}
+	#wind {
+		text-align: left;
+		padding-left: 2%;
+	}
+	#humidity {
+		padding-left: 2%;
+		text-align: left;
+	}
+
+	/*TOMORROW*/
+	#tomorrow {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#tomorrowlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#tomorrowinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#tomorrowcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 15%;
+	}
+	#tomorrowicon {
+		/* float: left; */
+		/* text-align: center; */
+	}
+	#tomorrowspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#tomorrowminmax {
+		clear: both;
+		padding-left: 1%;
+	}
+	#tomorrowhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY 2*/
+	#daytwo {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daytwolabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daytwoinfo {
+		float: left;
+		padding-left: 3%;
+		width: 10%;
+		text-align: center;
+	}
+	#daytwocondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 15%;
+	}
+	#daytwoicon {
+		
+	}
+	#daytwospeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daytwominmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daytwohumidity {
+		float: right;
+		padding-right: 1%;
+	}
+	/*DAY THREE*/
+	#daythree {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#daythreelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#daythreeinfo {
+		float: left;
+		padding-left: 3%;
+		width: 10%;
+		text-align: center;
+	}
+	#daythreecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 15%;
+	}
+	#daythreeicon {
+		
+	}
+	#daythreespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#daythreeminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#daythreehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	#dayfour {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfourlabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfourinfo {
+		float: left;
+		width: 10%;
+		padding-left: 3%;
+		text-align: center;
+	}
+	#dayfourcondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 15%;
+	}
+	#dayfouricon {
+		
+	}
+	#dayfourspeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfourminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfourhumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	#dayfive {
+		/* border-style: solid; */
+		width: 97.5%;
+		margin-left: 1%;
+	}
+	#dayfivelabel {
+		float: left;
+		padding-left: 1%;
+		width: 10%;
+		text-align: left;
+		font-weight: bold;
+	}
+	#dayfiveinfo {
+		float: left;
+		padding-left: 3%;
+		width: 10%;
+		text-align: center;
+	}
+	#dayfivecondition {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin-left: 15%;
+	}
+	#dayfiveicon {
+		
+	}
+	#dayfivespeed {
+		float: right;
+		padding-right: 1%;
+	}
+	#dayfiveminmax {
+		clear: both;
+		padding-left: 1%;
+		width: 15%;
+	}
+	#dayfivehumidity {
+		float: right;
+		padding-right: 1%;
+	}
+
+	/*HOURLY*/
+	#time0 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		/* 	padding-left: 0.18%; */
+		width: 10.6%;
+		text-align: center;
+	}
+	#time1 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time2 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time3 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time4 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time5 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time6 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time7 {
+		/* border-style: solid; */
+		border-right: 1px solid white;
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+	#time8{
+		/* border-style: solid; */
+		display: inline-block;
+		width: 10.6%;
+		text-align: center;
+	}
+}

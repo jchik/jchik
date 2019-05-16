@@ -1,0 +1,134 @@
+* {
+	margin: 0; 
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+h1 {
+	font-family: Chalkduster, sans-serif;
+}
+
+/*  HEADER */
+header {
+	flex: 0;
+	line-height: 3;
+	padding: 0rem 5rem;
+	background-color: #5C5C5C;
+}
+#logo {
+	width: 150px;
+	height: 150px;
+}
+#logo #icon {
+	width: 150px;
+	height: 150px;
+}
+#companyName {
+	width: 100%;
+	margin: auto;
+	font-size: 2.5rem;
+	font-weight: bold;
+	font-family: Comic Sans MS, fantasy, sans-serif;
+	color: #ABCDEF;
+}
+
+/* NAVIGATION */
+nav {
+	line-height: 2.5;
+	padding: 0rem 5rem;
+	border-top: 3px solid silver;
+	border-bottom: 3px solid silver;
+}
+nav #navWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+nav li {
+	display: inline-table;
+	text-decoration: none;
+	padding: 0px 25px 0px 0px;
+}
+nav li a {
+	text-decoration: none;
+	color: black;
+	font-family: Chalkduster, sans-serif;
+}
+nav li a:hover {
+	text-decoration: underline;
+}
+nav .social {
+	margin: auto 0;
+}
+nav .social a {
+	text-decoration: none;
+	color: black;
+}
+
+/* SECTIONS */
+section {
+	flex: 1;
+	padding: 1rem 5rem; 
+}
+.display {
+	padding-top: 1rem;
+}
+.display .image {
+	min-width: 128px;
+	min-height: 128px;
+}
+.display table, th, td {
+	border: 1px solid black;
+}
+.display td {
+	width: 5%;
+	text-align: center;
+}
+.display tr:nth-child(odd) {
+	background-color: #EFEFEF;
+}
+
+.infobar {
+	display: flex;
+	justify-content: space-between;
+}
+.infobar .messageBox, .infobar .totalCount {
+	margin: auto 0;
+}
+.infobar .messageBox {
+	font-size: 1.25rem;
+	color: red;
+}
+.forms {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 0.5rem;
+}
+
+/* FOOTERS */
+footer {
+	flex: 0;
+	text-align: center;
+	border-top: 1px solid silver;
+}
+
+/* CLASSES */
+.wrapper {
+	display: flex;
+}
+.center {
+	text-align: center;
+}
+.contact {
+	padding-top: 2rem;
+}

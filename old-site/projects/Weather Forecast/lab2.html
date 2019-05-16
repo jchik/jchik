@@ -1,0 +1,112 @@
+<!-- Jonathan Chik -->
+<!DOCTYPE html>
+<html><!-- Head --><head><meta http-equiv="Content-type" content="text/html" charset="utf-8" /><link rel="stylesheet" type="text/css" href="lab2style.css"><script type="text/javascript" src="lab2java.js"></script><title> Lab 2 </title></head>
+<!-- Body --><body onload="startup()">
+<!-- Header -->	<header><h3> Jonathan Chik - 500521068 <br> CPS630 Lab 2</h3>
+
+<form>
+	<button type="button" id="buttonCelsius" onclick="buttonC()"> Celsius </button>
+	<button type="button" id="buttonFahrenheit" onclick="buttonF()"> Fahrenheit </button>
+</form>
+<br><form id="searchbar">	<input type="text" name="city" id="city" placeholder="City Name" onkeypress="return enterButton(event);"/>
+	<button type="button" id="buttonSearch" onclick="search()"> Search </button></form>
+
+<span id="clock"> 2/14/2016 - 12:00 </span>
+
+<br> <br></header>
+<!-- Main -->	
+<main><br>
+<section id="currentweather"> <!-- CURRENT WEATHER -->
+<h2> Current Weather</h2>
+<hr>
+<div id="cityname"> City </div>
+<div id="temperature"> Temperature </div>
+<div id="condition"> Weather Condition </div>
+<!-- <span id="currenticon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="weathericon"> </span>  --><br>
+<div id="wind"> Wind Speed: </div>
+<div id="humidity"> Humidity: </div>
+<br>
+</section>
+
+<section id="fivedayforecast">  <!-- FIVE DAY FORECAST -->
+<h2> 5 Day Forecast </h2>
+<hr>
+<div id="tomorrow">
+<span id="tomorrowlabel"> Tomorrow </span>
+<span id="tomorrowinfo"> Temperature </span>
+<span id="tomorrowcondition"> Weather Conditions </span>
+<!-- <span id="tomorrowicon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="icontom"> </span> -->
+<span id="tomorrowspeed"> Wind Speed: </span>
+<br> <br> <br>
+<span id="tomorrowminmax"> Min | Max </span>
+<span id="tomorrowhumidity"> Humidity: </span>
+</div>
+<hr>
+
+<div id="daytwo">
+<span id="daytwolabel"> Day 2 </span>
+<span id="daytwoinfo"> Temperature </span>
+<span id="daytwocondition"> Weather Conditions </span>
+<!-- <span id="tomorrowicon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="icontom"> </span> -->
+<span id="daytwospeed"> Wind Speed: </span>
+<br> <br> <br>
+<span id="daytwominmax"> Min | Max </span>
+<span id="daytwohumidity"> Humidity: </span>
+</div>
+<hr>
+
+<div id="daythree">
+<span id="daythreelabel"> Day 3 </span>
+<span id="daythreeinfo"> Temperature </span>
+<span id="daythreecondition"> Weather Conditions </span>
+<!-- <span id="tomorrowicon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="icontom"> </span> -->
+<span id="daythreespeed"> Wind Speed: </span>
+<br> <br> <br>
+<span id="daythreeminmax"> Min | Max </span>
+<span id="daythreehumidity"> Humidity: </span>
+</div>
+<hr>
+
+<div id="dayfour">
+<span id="dayfourlabel"> Day 4 </span>
+<span id="dayfourinfo"> Temperature </span>
+<span id="dayfourcondition"> Weather Conditions </span>
+<!-- <span id="tomorrowicon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="icontom"> </span> -->
+<span id="dayfourspeed"> Wind Speed: </span>
+<br> <br> <br>
+<span id="dayfourminmax"> Min | Max </span>
+<span id="dayfourhumidity"> Humidity: </span>
+</div>
+<hr>
+
+<div id="dayfive">
+<span id="dayfivelabel"> Day 5 </span>
+<span id="dayfiveinfo"> Temperature </span>
+<span id="dayfivecondition"> Weather Conditions </span>
+<!-- <span id="tomorrowicon"> <img src="http://openweathermap.org/img/w/01d.png" align="middle" id="icontom"> </span> -->
+<span id="dayfivespeed"> Wind Speed: </span>
+<br> <br> <br>
+<span id="dayfiveminmax"> Min | Max </span>
+<span id="dayfivehumidity"> Humidity: </span>
+</div>
+<br>
+</section>
+<section id="hourly">  <!-- HOURLY -->
+<h2> 3 Hour Forecast </h2>
+<hr>
+
+<div id="time0"> 00:00 </div>
+<div id="time1"> 03:00 </div>
+<div id="time2"> 06:00 </div>
+<div id="time3"> 09:00 </div>
+<div id="time4"> 12:00 </div>
+<div id="time5"> 15:00 </div>
+<div id="time6"> 18:00 </div>
+<div id="time7"> 21:00 </div>
+<div id="time8"> 00:00 </div>
+</section>
+
+</main>
+</body>
+</html>
+

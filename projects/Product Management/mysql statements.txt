@@ -1,0 +1,22 @@
+CREATE TABLE paints (
+id int(6),
+name varchar(20),
+price float(5,2),
+quantity int(4),
+image varchar(30),
+primary key (id)
+);
+
+INSERT INTO paints
+VALUES
+(1,'Meow', 4.99, 9, 'images/cat.png'),
+(2,'Doge', 4.99, 7, 'images/dog.png'),
+(3,'Turtle', 5.99, 3, 'images/turtle.png'),
+(4,'Wabbit', 7.99, 4, 'images/bunny.png'),
+(5,'Polar', 5.99, 5, 'images/bear.png'),
+(90000,'Pika', 9.99, 2, 'images/pikachu.png'),
+(90001,'Eve', 9.99, 5, 'images/eevee.png'),
+(3000,'Rex', 9.99, 4, 'images/trex.png'),
+(100,'Piggy', 4.99, 0, 'images/temp.png'),
+(101,'Giraffe', 4.99, 0, 'images/temp.png'),
+(102,'Cow', 4.99, 0, 'images/temp.png');

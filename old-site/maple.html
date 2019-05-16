@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jonathan Chik | Maple Assets</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+		
+	<body>
+		<header id="top">
+			<nav class="navbar">
+				<div class="container">
+					<a class="name" href="https://jchik.github.io/jchik/">Jonathan Chik</a>
+					<ul class="nav">
+						<li class="nav-item"> <a href="https://jchik.github.io/jchik/">ABOUT</a> </li>
+						<li class="nav-item"> <a href="#">GAMES (WIP)</a> </li>
+						<li class="nav-item"> <a href="https://jchik.github.io/jchik/creative">CREATIVE</a> </li>
+						<li class="nav-item"> <a href="https://jchik.github.io/jchik/maple">MAPLE</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<section id="maple-assets">
+			<div class="container">
+				<p>Gaming meets AngularJS.</p>
+				<p>Here are just some game assets I've created for my own personal use.</p>
+				<p>These apps helped me learn and practice AngularJS.</p>
+			</div>
+		</section>
+
+		<section id="profit-asset">
+			<div class="container">
+				<h3>Profit Calculator</h3>
+                <div id="profit-app" data-ng-app="profit-calc" data-ng-controller="profit-calc-controller">
+					<div>
+						Quantity: <input type="number" data-ng-model="quantity">
+						Buy Price: <input type="number" data-ng-model="buy">
+						Sell Price: <input type="number" data-ng-model="sell">
+						Premium? (20% discount) <input type="checkbox" data-ng-model="prem" data-ng-init="checked=true">
+					</div>
+					<div>PROFIT: {{profit(prem) | number}} </div>
+				</div>
+			</div>
+		</section>
+
+		<section id="boss-asset">
+			<div class="container">						
+				<h3>World Boss Timers</h3>
+				<div id="boss-app" data-ng-app="boss-timer" data-ng-controller="boss-timer-controller">
+					<div>
+						<input id="boss-search" type="text" placeholder="Search.." data-ng-model="search">
+					</div>
+					<div>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th data-ng-click="sortBy('name')">WORLD BOSS</th>
+									<th data-ng-click="sortBy('time')">TIME</th>
+									<th>COUNTDOWN</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-ng-repeat="boss in list | orderBy:order | filter:search">
+									<td>
+										{{boss.name}}
+									</td>
+									<td>
+										:{{boss.time}}
+									</td>
+									<td>
+										00:{{countdown(boss.name, boss.time)}}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h5>Extra</h5>
+						<p>I am currently seeking a position as a Web Design/Developer or a Front-End Developer.</p>
+					</div>
+					<div class="col-md-4">
+						<h5>Resume</h5>
+						<p>If you have time or are interested in hiring me, take a look at my resume: <a href="pdfs/Resume - Jonathan Chik.pdf" target="_blank" download="Resume - Jonathan Chik.pdf">Resume</a> </p>
+					</div>
+					<div class="col-md-4">
+						<h5>Contact</h5>
+						<p>If you have any questions or comments, feel free to message me at the links provided below. </p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a href="https://github.com/jchik" target="_blank"> <i class="fa fa-github"> </i> </a>
+						<a href="mailto:jonathanchik13@hotmail.com" target="_blank"> <i class="fa fa-envelope"></i> </a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	<script>
+		//temp script
+		var calcModule = angular.module("profit-calc", []);
+		calcModule.controller("profit-calc-controller", function($scope) {
+			$scope.prem = true;
+			$scope.profit = "x";
+			$scope.profit = function(p) {
+				if (p) {
+					return $scope.quantity * $scope.sell * 0.92 - $scope.quantity * $scope.buy;
+				} else {
+					return $scope.quantity * $scope.sell * 0.90 - $scope.quantity * $scope.buy;
+				}
+				
+			}
+		});
+
+		var bossModule = angular.module("boss-timer", []);
+		bossModule.controller("boss-timer-controller", function($scope, $interval) {		
+			$scope.list = [//{name:"CHKY-002", time:"05"},
+				{name:"Acreon", time:"05"}, {name:"Doondun", time:"05"}, {name:"Furious Baphomet", time:"05"},
+				{name:"Ikar Morde", time:"05"}, {name:"Lo and Moomoo", time:"05"},
+				{name:"Griffin", time:"15"}, {name:"Heartless Baphomet", time:"15"}, {name:"Ureus", time:"15"},
+				{name:"Griffina", time:"25"}, {name:"Toh and Googoo", time:"25"},
+				{name:"Giant Turtle", time:"35"}, {name:"Vayar Gatekeeper", time:"35"},
+				{name:"Alpha Turtle", time:"40"}, 
+				{name:"Lernos", time:"45"}, {name:"MK 52 Alpha", time:"45"},
+				{name:"Amadon", time:"55"}, {name:"Devilin Warrior", time:"55"}, {name:"Pekanos", time:"55"}];
+
+			$scope.sortBy = function(type) {
+				$scope.order = type;
+			}
+
+			$interval($scope.countdown, 1000);
+			$scope.countdown = function(bn, bt) {
+				var date = new Date();
+				var hour = date.getHours();
+				var min = date.getMinutes();
+				var sec = date.getSeconds();
+
+				var timeSec = min*60 + sec;
+				var bosstimeSec = bt*60;
+
+				if (timeSec > bosstimeSec) {
+					var cdtSec = 60*60 - timeSec + bosstimeSec;
+				} else {
+					var cdtSec = bosstimeSec - timeSec;
+					//alert("Boss spawning!");
+				}
+				
+				var cdMin = Math.floor(cdtSec / 60);
+				var cdSec = cdtSec % 60;
+				if (cdMin.toString().length < 2) {
+					cdMin = "0" + cdMin.toString();
+				}
+				if (cdSec.toString().length < 2) {
+					cdSec = "0" + cdSec.toString();
+				}
+				
+				return cdMin + ":" + cdSec;				
+			}	
+		});		
+		
+		angular.bootstrap(document.getElementById("boss-app"), ["boss-timer"]);
+	</script> 
+	<script src="js/bootstrap.js"></script>
+
+</html>
