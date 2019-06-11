@@ -45,7 +45,7 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
     }, 5000);
 
     $scope.refreshBus = function(bus) {
-        var nextBusAPI = "https://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + bus.routeNo + "&s=" + bus.stopNo;   
+        var nextBusAPI = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + bus.routeNo + "&s=" + bus.stopNo;   
         
         $.getJSON(nextBusAPI, function(data) {   
             var stopPredictionList = [];
@@ -102,7 +102,7 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
             stop = stop.substring(0,stopDash);
         }
 
-        var nextBusAPI = "https://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + route + "&s=" + stop;   
+        var nextBusAPI = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + route + "&s=" + stop;   
     
         $.getJSON(nextBusAPI, function(data) {
             var routeTitle = `${data.predictions.routeTitle}`;
@@ -172,7 +172,7 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
 });
 
 function getBusRoutes() {
-    var nextBusAPIbusRoute = "https://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc";
+    var nextBusAPIbusRoute = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc";
     var busRouteList = {};
 
     $.getJSON(nextBusAPIbusRoute, function(data) {
@@ -198,7 +198,7 @@ function getBusStops(search) {
         search = search.substring(0,dashIndex);
     }
 
-    var nextBusAPIbusStops = "https://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=ttc&r=" + search;
+    var nextBusAPIbusStops = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=ttc&r=" + search;
     busStopList = {};
 
     $.getJSON(nextBusAPIbusStops, function(data) {
