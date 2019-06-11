@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Jonathan Chik</title>
+		<meta name="description" content="Jonathan Chik">
+		<meta name="keywords" content="jonathan, chik, jonathan chik, jchik, github">
+        
+		<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Karla|Varela+Round" rel="stylesheet"> 		
+		<link rel="stylesheet" href="../../styles/bootstrap.css">
+        <link rel="stylesheet" href="../../styles/style.css">
+		<link rel="stylesheet" href="./bus-style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    </head>
+		
+	<body>
+		<header>
+		</header>
+
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="name" href="https://jchik.github.io/jchik/">Jonathan Chik</a>
+				</div>
+				<div> 
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div id="navbarNav" class="collapse navbar-collapse">     
+					<ul class="navbar-nav">
+						<li class="nav-item"> 
+							<a class="nav-link" href="../../games">GAMES</a>
+						</li>
+						<li class="nav-item"> 
+							<a class="nav-link" href="../../creative">CREATIVE</a> 
+						</li>
+						<li class="nav-item"> 
+							<a class="nav-link" href="../../maple">MAPLE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <section id="ttc-schedule" data-ng-app="ttc-app" data-ng-controller="ttc-controller">
+            <div class="container">
+				<div id="project-header">
+					<div class="header-title">TTC NextBus</div>
+					<div class="clock"></div>
+				</div>
+                <div id="bus-search">
+					<form class="bus-form">
+						<input class="route-search" data-ng-model="routeID" type="text" list="bus-route-list" placeholder=" Bus Route.."></input>		
+						<datalist id="bus-route-list"></datalist>	
+						<input class="stop-search" data-ng-model="stopID" type="text" list="bus-stop-list" placeholder=" Bus Stop.."></input>		
+						<datalist id="bus-stop-list"></datalist>	
+						<input class="search-button" data-ng-click="addBus()" type="button" value="Search"></input>
+					</form>
+				</div>
+				<div id="bus-info">
+					<i class="fas fa-heart"></i> Pinned
+					<div class="bus-pinned" data-ng-repeat="bus in pinnedBusList">
+						<div class="bus-toolbar">
+							<span class="bus-unpin fas fa-minus" data-ng-click="unpinBus(bus)"></span>
+							<span class="bus-refresh fas fa-redo" data-ng-click="refreshBus(bus)"></span>
+							<span class="bus-close fas fa-times" data-ng-click="removeBusPinned(bus)"></span>
+						</div>
+						<div class="bus-title">{{bus.routeDesc}}</div>
+						<div class="stop-title">{{bus.stopDesc}}</div> 
+						<br/>
+						<div class="row">
+							<div class="bus-prediction col-md-6" data-ng-repeat="times in bus.stopList">
+								<div class="bus-direction">{{times.direction}}</div>	
+								<div class="bus-times" data-ng-repeat="prediction in times.nextBus">
+									{{prediction.letter}}{{prediction.time}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="divider"></div>
+					<i class="fas fa-bus-alt"></i> Buses
+					<div class="bus-schedule" data-ng-repeat="bus in busPredictionList">
+						<div class="bus-toolbar">
+							<span class="bus-pin fas fa-thumbtack" data-ng-click="pinBus(bus)"></span>
+							<span class="bus-refresh fas fa-redo" data-ng-click="refreshBus(bus)"></span>
+							<span class="bus-close fas fa-times" data-ng-click="removeBus(bus)"></span>
+						</div>
+						<div class="bus-title">{{bus.routeDesc}}</div>
+						<div class="stop-title">{{bus.stopDesc}}</div> 
+						<br/>
+						<div class="row">
+							<div class="bus-prediction col-md-6" data-ng-repeat="times in bus.stopList">
+								<div class="bus-direction">{{times.direction}}</div>	
+								<div class="bus-times" data-ng-repeat="prediction in times.nextBus">
+									{{prediction.letter}}{{prediction.time}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		
+		<footer>			
+			<svg id="banner"></svg>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h6 class="text-center">Status</h6>
+						<p class="text-center">I am currently seeking any position as a Developer/Designer or related IT field.</p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="text-center">Resume</h6>
+						<p class="text-center">If you have time or are interested in working with me, take a look at my resume.</p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="text-center">Contact</h6>
+						<p class="text-center">If you have any questions or comments, feel free to message me.</p>
+					</div>
+				</div>
+				<div id="socials" class="pad-top text-center">
+					<a class="far fa-file" href="../../pdfs/Resume-Jonathan.Chik.pdf">
+						<span class="fa-desc">Resume</span>
+					</a>
+					<a class="fab fa-github" href="https://github.com/jchik" target="_blank">						
+						<span class="fa-desc">Github</span>
+					</a>
+					<a class="far fa-envelope" href="mailto:jonathanchik13@hotmail.com" target="_blank">
+						<span class="fa-desc">Email</span>							
+					</a>
+				</div>
+				<div class="text-center">jonathanchik13@hotmail.com</div>
+			</div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>        
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="../../scripts/bootstrap.js"></script>
+		<script src="./bus-script.js"></script>
+	</body>
+</html>
