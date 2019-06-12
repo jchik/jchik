@@ -39,10 +39,10 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
     }  
 
     $interval(function() {
-        // for (var b in $scope.pinnedBusList) {
-        //     $scope.refreshBus(b);
-        // }
-    }, 5000);
+        for (var b in $scope.pinnedBusList) {
+            $scope.refreshBus($scope.pinnedBusList[b]);
+        }
+    }, 10000);
 
     $scope.refreshBus = function(bus) {
         var nextBusAPI = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + bus.routeNo + "&s=" + bus.stopNo;   
