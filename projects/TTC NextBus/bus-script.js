@@ -78,6 +78,9 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
             for (var i=0; i<$scope.pinnedBusList.length; i++) {
                 if (bus === $scope.pinnedBusList[i]) {
                     $scope.pinnedBusList[i].stopList = stopPredictionList;
+					if (typeof localStorage !== 'undefined') {
+                        localStorage.setItem("pinned", JSON.stringify($scope.pinnedBusList));
+                    }
                     $scope.$apply();
                 }
             }

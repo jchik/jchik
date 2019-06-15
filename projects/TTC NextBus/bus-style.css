@@ -69,6 +69,20 @@
     text-shadow: 0px 0px 5px cyan;
 }
 
+.bus-pinned .bus-refresh {
+    text-shadow: 0px 0px 5px #80ee80;
+    -webkit-animation: rotato 3s infinite;
+    animation: rotato 3s infinite;
+}
+@-webkit-keyframes rotato {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes rotato {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 /* - BOOTSTRAP - */
 /* ------------- */
 .row {
