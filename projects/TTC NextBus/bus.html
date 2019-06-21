@@ -47,7 +47,7 @@
 			</div>
 		</nav>
 
-        <section id="ttc-schedule" data-ng-app="ttc-app" data-ng-controller="ttc-controller">
+		<section id="ttc-schedule" data-ng-app="ttc-app" data-ng-controller="ttc-controller" data-ng-init="init()">
             <div class="container">
 				<div id="project-header">
 					<div class="header-title">TTC NextBus</div>
@@ -59,7 +59,8 @@
 						<datalist id="bus-route-list"></datalist>	
 						<input class="stop-search" data-ng-model="stopID" type="text" list="bus-stop-list" placeholder=" Bus Stop.."></input>		
 						<datalist id="bus-stop-list"></datalist>	
-						<input class="search-button" data-ng-click="addBus()" type="button" value="Search"></input>
+						<input class="form-button" data-ng-click="addBus()" type="button" value="Search"></input>
+						<input class="form-button" type="reset" value="Clear"></input>
 					</form>
 				</div>
 				<div id="bus-info">
@@ -102,6 +103,10 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div id="messages">
+					<span class="message-text"></span>
+					<span class="message-close" data-ng-click="hideMessage()">x</span>
 				</div>
             </div>
         </section>
