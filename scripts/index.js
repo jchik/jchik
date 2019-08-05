@@ -79,7 +79,7 @@ function startSunrise() {
     var sun = document.getElementById('svg-sun');
     var text = document.getElementById('svg-sun-text');
 
-    sun.classList.add('rising');
+    sun.classList.add('rise');
     setTimeout(function() {
         sun.classList.add('spin');
     }, 1000);
@@ -96,7 +96,7 @@ function resetSunrise() {
 
     text.classList.remove('display');
     setTimeout(function() {
-        sun.classList.remove('rising');
+        sun.classList.remove('rise');
         sun.classList.remove('spin');
     }, 500);
     sunrise = false;
