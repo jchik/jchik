@@ -8,11 +8,11 @@ window.onscroll = function () {
     scrolling();
 };
 
-document.documentElement.addEventListener('click', function (event) {
+document.documentElement.addEventListener('click', function(event) {
     //if (event.button !== 0) return; /*Left-Click only*/
 
     if (event.target.matches('#welcome')) {
-        openStart();
+        typeWelcome();
     }
 
     if (event.target.matches('.project-thumbnail')) {
@@ -26,23 +26,26 @@ document.documentElement.addEventListener('click', function (event) {
     if (event.target.matches('#sunrise') || event.target.matches('#svg-sun') || event.target.matches('#svg-sun-text')) {
         startSunrise();
     }
+
+    if (event.target.matches('#test') || event.target.matches('#curve')) {
+        startCurve();
+    }
 });
 
 var textIndex = 0;
 var text = "Welcome.";
-
-function openStart() {
+function typeWelcome() {
     if (textIndex < text.length) {
         document.getElementById('welcome-text').innerHTML += text.charAt(textIndex);
         textIndex++;
-        setTimeout(openStart, 150);
+        setTimeout(typeWelcome, 150);
     }	
     else {
-        setTimeout(closeStart, 1500);
+        setTimeout(hideWelcome, 1500);
     }
 }
 
-function closeStart() {
+function hideWelcome() {
     document.getElementById('welcome').style.height = "0%";
     document.getElementById('welcome-text').style.display ="none";
     clickToTop();

@@ -34,10 +34,10 @@ section {
 
 .flexed {
 	display: flex;
-	justify-content: center;
 }
-.flexed a {
-	margin: 15px 15px;
+.flexed-center {
+	display: flex;
+	justify-content: center;
 }
 
 .no-js {
@@ -62,6 +62,7 @@ section {
 	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 	height: 100px;
 	width: 100%;
+	margin-top: -0.05em;
 }
 .fa-desc {
 	border: 1px solid white;
@@ -177,8 +178,8 @@ section {
 	position: absolute;
 	bottom: 1%;
 	left: 50%;
-	-webkit-animation: bounce 1s infinite alternate-reverse;
-	animation: bounce 1s infinite alternate-reverse;
+	-webkit-animation: bounce 0.5s infinite alternate-reverse;
+	animation: bounce 0.5s infinite alternate-reverse;
 }
 
 @-webkit-keyframes bounce {
@@ -236,13 +237,23 @@ section {
 	font-size: 125%;
 	margin: 1.5em 0em 0em 0em;
 	padding: 5px 15px;
+	transition: all 0.3s ease-in-out;
 }
-#about .resume-button:hover {	
+#about .resume-button:hover {
+	background-color: white;
 	box-shadow: 0px 0px 7px 1px white;
+	color: #2d3c4d;
+	font-weight: bold;
 }
 #traits {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 	padding-top: 5em;
-	text-align: center;
+}
+#traits div {
+	padding: 15px 0px;
+	width: 250px;
 }
 
 /* PROJECTS */
@@ -320,6 +331,7 @@ section {
 #design a, #design a:hover {
 	color: white;
 	display: inline-block;
+	margin: 5px;
 	position: relative;
 	text-transform: uppercase;
 }
@@ -432,18 +444,22 @@ section {
 	width: 100%;
 }
 
-#sunrise {
+#design svg {
 	border: 1px solid white;
 	cursor: pointer;
+	margin: 0px 15px;
 }
 #svg-sun {
+	fill: none;
+	stroke: white;
+	stroke-width: 4.5;
 	opacity: 0;
 	-webkit-transform: translateY(25%);
 	transform: translateY(25%);
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 }
-#svg-sun.rising {
+#svg-sun.rise {
 	opacity: 1;
 	-webkit-transform: translateY(0%);
 	transform: translateY(0%);
@@ -453,6 +469,8 @@ section {
 	animation: spinz 2s;
 }
 #svg-sun-text {
+	fill: white;
+	font-size: 24px;
 	opacity: 0;
 	-webkit-user-select: none;
 	user-select: none;
@@ -461,6 +479,17 @@ section {
 }
 #svg-sun-text.display {
 	opacity: 1;
+}
+#curve {
+	fill: none;
+	stroke: white;
+	stroke-dasharray: 313;
+	stroke-dashoffset: 313;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#curve.animate {
+	stroke-dashoffset: 0;
 }
 
 @-webkit-keyframes spinz {
@@ -488,6 +517,9 @@ section {
 /* --------- */
 #extra {
 	padding-bottom: 0em;
+}
+#extra a {
+	margin: 15px;
 }
 
 /* - CREATIVE - */

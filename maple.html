@@ -59,15 +59,25 @@
 
 		<section id="profit-asset">
 			<div class="container">
-				<h3>Profit Calculator</h3>
+				<h3>MS2 Profit Calculator</h3>
                 <div id="profit-app" data-ng-app="profit-calc" data-ng-controller="profit-calc-controller">
-					<div>
-						Quantity: <input type="number" data-ng-model="quantity">
-						Buy Price: <input type="number" data-ng-model="buy">
-						Sell Price: <input type="number" data-ng-model="sell">
-						Premium? (20% discount) <input type="checkbox" data-ng-model="prem" data-ng-init="checked=true">
+					<div class="row">
+						<div class="col-md-3">
+							Quantity: <input type="number" data-ng-model="quantity">
+						</div>
+						<div class="col-md-3">
+							Buy Price: <input type="number" data-ng-model="buy">
+						</div>
+						<div class="col-md-3">
+							Sell Price: <input type="number" data-ng-model="sell">
+						</div>
+						<div class="col-md-3">
+							Premium? (20% discount) <input type="checkbox" data-ng-model="prem" data-ng-init="checked=true">
+						</div>
 					</div>
-					<div>PROFIT: {{profit(prem) | number}} </div>
+					<div class="pad-top">
+						PROFIT: {{profit(prem) | number}}
+					</div>
 				</div>
 			</div>
 		</section>
