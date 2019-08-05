@@ -26,10 +26,6 @@ document.documentElement.addEventListener('click', function(event) {
     if (event.target.matches('#sunrise') || event.target.matches('#svg-sun') || event.target.matches('#svg-sun-text')) {
         startSunrise();
     }
-
-    if (event.target.matches('#test') || event.target.matches('#curve')) {
-        startCurve();
-    }
 });
 
 var textIndex = 0;
