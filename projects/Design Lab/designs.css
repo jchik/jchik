@@ -1,0 +1,288 @@
+/* --- GENERAL --- */
+a {
+	color: white;
+	text-decoration: none;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+section > div > h3 ~ div {
+    padding: 1em;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+/* --- NAV --- */
+.nav-items a {
+	cursor: pointer;
+    padding: 0px 25px;
+}
+
+/* --- HOVER --- */
+#underlines a, #underlines a:hover {
+	color: white;
+	display: inline-block;
+	margin: 15px;
+	position: relative;
+	text-transform: uppercase;
+}
+#underlines a:after {
+	background-color: white;
+	content: "";
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+}
+
+#underlines .basic:after {
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	-webkit-transition: all 0s ease-in-out;
+	transition: all 0s ease-in-out;
+}	
+#underlines .fade-away:after {
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .left-to-right:after {
+	left: 0;
+	width: 0%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .inner-to-outer:after {
+	left: 50%;
+	width: 0%;
+	-webkit-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;	
+}
+#underlines .right-to-left:after {
+	right: 0;
+	width: 0%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines a:hover:after {
+	opacity: 1;
+	width: 100%;
+}
+
+#underlines .fade-up:after {
+	opacity: 0;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .fade-up:hover:after {
+	opacity: 1;
+	width: 100%;
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+#underlines .fade-down:after {
+	opacity: 0;
+	left: 0;
+	width: 100%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .fade-down:hover:after {
+	opacity: 1;
+	width: 100%;
+	-webkit-transform: translate(0px, 5px);
+	transform: translate(0px, 5px);
+}
+#underlines .slide:after {
+	right: 0;
+	width: 0%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .slide:hover:after {
+	left: 0;
+	width: 100%;
+}
+
+#underlines .oreo:before {
+	background-color: white;
+	content: "";
+	height: 3px;
+	width: 0%;
+	position: absolute;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#underlines .oreo:after {
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	width: 0%;
+	-webkit-transition: all 0.5s ease-in-out;	
+	transition: all 0.5s ease-in-out;
+}
+#underlines .oreo:hover:before, #design .oreo:hover:after {
+	background-color: black;
+	opacity: 1;
+	width: 100%;
+}
+
+/* --- ANIMATIONS --- */
+#animation svg {
+	border: 1px solid white;
+	cursor: pointer;
+	margin: 0px 15px;
+}
+#svg-sun {
+	fill: none;
+	stroke: white;
+	stroke-width: 4.5;
+	opacity: 0;
+	-webkit-transform: translateY(25%);
+	transform: translateY(25%);
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#svg-sun.rise {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+}
+#svg-sun.spin {
+	-webkit-animation: spinz 2s;
+	animation: spinz 2s;
+}
+#svg-sun-text {
+	fill: white;
+	font-size: 24px;
+	opacity: 0;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#svg-sun-text.display {
+	opacity: 1;
+}
+@-webkit-keyframes spinz {
+	0% {
+		-webkit-transform-origin: 50% 50%;
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform-origin: 50% 50%;
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spinz {
+	0% {
+		transform-origin: 50% 50%;
+		transform: rotate(0deg);
+	}
+	100% {
+		transform-origin: 50% 50%;
+		transform: rotate(360deg);
+	}
+}
+
+#curve {
+	fill: none;
+	stroke: white;
+	stroke-dasharray: 313;
+	stroke-dashoffset: 313;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#curve.animate {
+	stroke-dashoffset: 0;
+}
+
+/* --- IMAGES --- */
+.images-container {
+    border: 2px solid white;
+    position: relative;
+}
+
+/* Slide Change */
+#slider-left-container {
+    position: absolute;
+    z-index: 99;
+}
+#slider-right-container {
+    z-index: 0;
+}
+.slider-image-container {
+    height: 500px;
+    width: 100%;
+}
+.scenery-image {
+    background-image: url("../../art/scene.jpg");    
+    height: 100%;
+}
+.grey-filter {
+    filter: grayscale(1);
+}
+
+.slider {
+    /* appearance: none;
+    -webkit-appearance: none;  */
+    cursor: ew-resize;
+    height: 5px;
+    margin: 25px 0px;
+    opacity: 0.75;
+    width: 50%;
+}
+.slider:hover {
+    opacity: 1;
+}
+
+/* Tri-Image */
+.tri-image-container {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.tri-bg {
+    background-size: cover;
+    height: 100%;
+}
+.tri-left-bg {
+    background-image: url("../../art/scene2.jpg");
+}
+.tri-mid-bg {
+    background-image: url("../../art/scene3.jpg");
+}
+.tri-right-bg {
+    background-image: url("../../art/scene4.jpg");
+}
+
+/* Tri-Image-2 */
+.tri-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-sub {
+    width: 10%;
+}
+
