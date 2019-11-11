@@ -41,6 +41,7 @@ section {
 }
 .flexed-center {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -303,6 +304,11 @@ section {
 	100% {
 		transform: translate(20px, 0);
 	}
+}
+@media (max-width: 767px) {
+	#projects .url-pointer {
+		display: none;
+	}	
 }
 #projects .url-bar {
 	background-color: white;
