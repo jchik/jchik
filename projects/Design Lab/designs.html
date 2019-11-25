@@ -22,27 +22,62 @@
             <nav>
                 <div class="nav-title"><a href="./designs.html">Design Lab</a></div>
                 <div class="nav-items">
-                    <a onclick="scrollToSection('hover')">Hover</a>
-                    <a onclick="scrollToSection('animation')">Animations</a>
-                    <a onclick="scrollToSection('images')">Images</a>
+					<a onclick="scrollToSection('graphics')">Graphics</a>
+					<a onclick="scrollToSection('animation')">Animations</a>
+					<a onclick="scrollToSection('hover')">Hovers</a>
+					<a onclick="scrollToSection('images')">Images</a>
                 </div>
-                <div class="name"><a href="../../index.html">jchik</a></div>
+                <div class="name"><a href="https://jchik.github.io/jchik/">jchik</a></div>
             </nav>
 		</header>
 
-		<section id="logos">
+		<section id="graphics">
 			<div class="container">
-				<h3 class="text-centered">Logos</h3>
-				<div class="flexed-center">
-					<object type="image/svg+xml" data="../../svg/chain.svg">Your browser does not support SVG</object>
+				<h3>Graphics</h3>
+				<div id="logos">
+					<h4 class="text-centered">Logos</h4>
+					<div class="flexed-center">
+						<img src="../../svg/chain.svg" alt="chain">
+						<img src="../../svg/square-icon.svg" alt="square">
+					</div>
+					<div class="flexed-center">
+						<img src="../../svg/circle-icons.svg" alt="circles">
+					</div>
+				</div>
+				<div id="infographs">
+					<h4 class="text-centered">Infographs</h4>
+					<div class="flexed-center">
+						<img src="../../svg/infographic.svg" alt="infographic">
+					</div>
 				</div>
 			</div>
 		</section>
 		
-        <section id="hover">
+		<section id="animation">
 			<div class="container">
-				<h3 class="text-centered">Hover</h3>
+				<h3>Animations</h3>
+				<div class="logos">
+					<div class="flexed-center">
+						<svg id="sunrise" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+							<g>
+								<title>SunRiSe</title>
+								<path id="svg-sun" d="m237.00076,124.98814l-45.19604,16.07997l0,-32.13416l45.19604,16.05418zm-32.81323,-79.19923l-20.58676,43.34195l-22.72861,-22.74211l43.31537,-20.59984zm-79.18649,-32.78734l16.06798,45.19696l-32.134,0l16.06602,-45.19696zm-79.18476,32.78734l43.31557,20.59984l-22.72952,22.74211l-20.58604,-43.34195zm-32.81478,79.19923l45.19776,-16.05418l0,32.13416l-45.19776,-16.07997zm32.81478,79.19904l20.58604,-43.31599l22.72952,22.72905l-43.31557,20.58694l0,0zm79.18476,32.8134l-16.06602,-45.19693l32.134,0l-16.06798,45.19693zm79.18649,-32.8134l-43.31537,-20.58694l22.72861,-22.72905l20.58676,43.31599zm-135.173,-79.19904l0,0c0,-30.91962 25.05496,-55.99986 55.9865,-55.99986c30.93268,0 56.01314,25.08024 56.01314,55.99986c0,30.9323 -25.08046,55.99956 -56.01314,55.99956c-30.93154,0 -55.9865,-25.06726 -55.9865,-55.99956l0,0z"/>
+								<text id="svg-sun-text" xml:space="preserve" text-anchor="start" x="77.62625" y="133.58586">SunRiSe</text>
+							</g>
+						</svg>
+						<svg id="test" width="300" height="250" xmlns="http://www.w3.org/2000/svg">
+							<path id="curve" d="M10 150 Q77.5 80, 145 150 T280 150"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<section id="hover">
+			<div class="container">
+				<h3>Hovers</h3>
 				<div id="underlines">
+					<h4 class="text-centered">Underlines</h4>
 					<div class="flexed-center">
 						<a class="basic" href="#">Basic</a>
 						<a class="fade-away" href="#">Fade Away</a>
@@ -61,24 +96,10 @@
 						<a class="oreo" href="#">Oreo</a>
 					</div>
 				</div>
-			</div>
-		</section>
-		
-		<section id="animation">
-			<div class="container">
-				<h3 class="text-centered">Animations</h3>
-				<div class="logos">
+				<div id="buttons">
+					<h4 class="text-centered">Buttons</h4>
 					<div class="flexed-center">
-						<svg id="sunrise" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
-							<g>
-								<title>SunRiSe</title>
-								<path id="svg-sun" d="m237.00076,124.98814l-45.19604,16.07997l0,-32.13416l45.19604,16.05418zm-32.81323,-79.19923l-20.58676,43.34195l-22.72861,-22.74211l43.31537,-20.59984zm-79.18649,-32.78734l16.06798,45.19696l-32.134,0l16.06602,-45.19696zm-79.18476,32.78734l43.31557,20.59984l-22.72952,22.74211l-20.58604,-43.34195zm-32.81478,79.19923l45.19776,-16.05418l0,32.13416l-45.19776,-16.07997zm32.81478,79.19904l20.58604,-43.31599l22.72952,22.72905l-43.31557,20.58694l0,0zm79.18476,32.8134l-16.06602,-45.19693l32.134,0l-16.06798,45.19693zm79.18649,-32.8134l-43.31537,-20.58694l22.72861,-22.72905l20.58676,43.31599zm-135.173,-79.19904l0,0c0,-30.91962 25.05496,-55.99986 55.9865,-55.99986c30.93268,0 56.01314,25.08024 56.01314,55.99986c0,30.9323 -25.08046,55.99956 -56.01314,55.99956c-30.93154,0 -55.9865,-25.06726 -55.9865,-55.99956l0,0z"/>
-								<text id="svg-sun-text" xml:space="preserve" text-anchor="start" x="77.62625" y="133.58586">SunRiSe</text>
-							</g>
-						</svg>
-						<svg id="test" width="300" height="250" xmlns="http://www.w3.org/2000/svg">
-							<path id="curve" d="M10 150 Q77.5 80, 145 150 T280 150"></path>
-						</svg>
+						<a class="testa" href="#">Button</a>
 					</div>
 				</div>
 			</div>

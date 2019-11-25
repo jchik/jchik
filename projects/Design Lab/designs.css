@@ -8,6 +8,10 @@ h3 {
     text-decoration: underline;
 }
 
+section {
+	border-top: 1px solid white;
+}
+
 section > div > h3 ~ div {
     padding: 1em;
 }
@@ -26,7 +30,13 @@ nav {
     padding: 0px 25px;
 }
 
+/* --- LOGOS --- */
+#logos img {
+	padding: 15px;
+}
+
 /* --- HOVER --- */
+/* UNDERLINES */
 #underlines a, #underlines a:hover {
 	color: white;
 	display: inline-block;
@@ -131,6 +141,7 @@ nav {
 	transition: all 0.5s ease-in-out;
 }
 #underlines .oreo:after {
+	background-color: white;
 	bottom: 0;
 	left: 0;
 	opacity: 0;
@@ -138,17 +149,135 @@ nav {
 	-webkit-transition: all 0.5s ease-in-out;	
 	transition: all 0.5s ease-in-out;
 }
-#underlines .oreo:hover:before, #design .oreo:hover:after {
+#underlines .oreo:hover:before, #underlines .oreo:hover:after {
 	background-color: black;
 	opacity: 1;
 	width: 100%;
+}
+
+/* BUTTONS */
+#buttons a {
+	background-color: white;
+	color: black;
+	display: inline-block;
+	font-weight: bold;
+	margin: 15px;
+	padding: 5px 15px;
+	position: relative;
+	text-transform: uppercase;
+}
+#buttons .testa {
+	border: 1px solid black;
+	-webkit-transition: all 0.5s ease-in-out;	
+	transition: all 0.5s ease-in-out;
+}
+#buttons .testa:hover {
+	background-color: black;
+	color: white;
+}
+
+/* CARDS */
+.card-container {
+	background-color: white;
+	border: 1px solid white;
+	color: black;
+	cursor: pointer;
+	margin: 5px;
+	position: relative;
+}
+.card-container .card-pic {
+	font-size: 10em;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+.card-container .card-img {
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+}
+.card-container .card-name, #card-modal-name {
+	background-color: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0.75;
+	padding: 5px 15px;
+}
+.card-container .card-text {
+	display: none;
+}
+
+#card-modal {
+	background-color: rgba(0, 0, 0, 0.3);
+	display: inline-block;
+	height: 0%;
+	width: 0%;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.card-modal-container {
+	background-color: #f2f2f2;
+	border: 3px solid black;
+	box-shadow: 0px 0px 15px 3px white;
+	color: black;
+	display: flex;
+	height: 60%;
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.card-modal-container-left {
+	border-right: 3px solid black;
+	width: 40%;
+}
+#card-modal-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	text-align: center;
+}
+.card-modal-container-right {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+.card-story-title {
+	background: linear-gradient(to top right, #b50606, white);
+	border-bottom: 1px solid black;
+	font-size: 3em;
+	padding: 15px;
+	text-align: left;
+}
+#card-modal-text {
+	height: 100%;
+	padding: 15px;
+}
+.close-modal-x {
+	color: white;
+	cursor: pointer;
+	font-size: 3em;
+	position: absolute;
+	top: 5%;
+	right: 5%;
 }
 
 /* --- ANIMATIONS --- */
 #animation svg {
 	border: 1px solid white;
 	cursor: pointer;
-	margin: 0px 15px;
+	margin: 5px 15px;
 }
 #svg-sun {
 	fill: none;

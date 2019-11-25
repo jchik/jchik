@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="344.43" height="250.01" version="1.1" viewBox="0 0 91.13 66.148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="250" height="250" version="1.1" viewBox="0 0 66.146 66.146" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <filter id="filter3734" x="-.14333" y="-.10349" width="1.2867" height="1.207" style="color-interpolation-filters:sRGB">
    <feGaussianBlur stdDeviation="1.9843747"/>
@@ -36,10 +36,10 @@
    <stop style="stop-color:#acf" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-315.68 157.25)" style="display:none">
+ <g transform="translate(-424.67 156.49)">
   <rect x="216.96" y="-166.02" width="661.46" height="661.46" style="fill:#b3b3b3;paint-order:normal"/>
  </g>
- <g transform="translate(-315.68 157.25)">
+ <g transform="translate(-424.67 156.49)">
   <g transform="matrix(.73632 0 .11361 .64551 104.11 -255.66)" style="stroke-width:1.4505">
    <path d="m281.25 167.63-5.5529 20.619-16.659 61.858 72.139-0.1057 11.106-41.238 5.5529-20.619-20.611 0.0302-11.106 41.238-30.917 0.0453 11.106-41.238 5.1528-8e-3 5.5529-20.619zm27.097-4.9864-16.659 61.858 20.611-0.0302 5.5529-20.619 5.5529-20.619 30.917-0.0453-11.106 41.238-5.1528 8e-3 -5.5529 20.619 25.764-0.0377 5.5529-20.619 16.659-61.858-51.528 0.0755z" style="fill:#e6e6e6;paint-order:normal;stroke-linecap:square;stroke-width:9.5943;stroke:#333"/>
    <path d="m277.28 162.34-5.5529 20.619-16.659 61.858 72.139-0.1057 11.106-41.238 5.5529-20.619-20.611 0.0302-11.106 41.238-30.917 0.0453 11.106-41.238 5.1528-8e-3 5.5529-20.619zm27.097-4.9864-16.659 61.858 20.611-0.0302 5.5529-20.619 5.5529-20.619 30.917-0.0453-11.106 41.238-5.1528 8e-3 -5.5529 20.619 25.764-0.0377 5.5529-20.619 16.659-61.858-51.528 0.0755z" style="fill:#e6e6e6;paint-order:normal;stroke-linecap:square;stroke-width:9.5943;stroke:#000"/>
