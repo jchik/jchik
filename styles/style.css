@@ -23,7 +23,7 @@ body {
 footer {
 	background-color: #101010;
 	color: white;
-	padding: 0em 0em 1.5em 0em;
+	padding: 2.5em 0em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +38,7 @@ section {
 /* - CLASSES - */
 .flexed {
 	display: flex;
+	flex-wrap: wrap;
 }
 .flexed-center {
 	display: flex;
@@ -53,10 +54,6 @@ section {
 	padding: 0;
 }
 
-.pad-top {
-	padding-top: 2.5em;
-}
-
 .text-centered {
 	text-align: center;
 }
@@ -66,13 +63,6 @@ section {
 }
 
 /* - FOOTER - */
-#banner {
-	background-color: #202d3d;
-	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-	height: 100px;
-	width: 100%;
-	margin-top: -0.05em;
-}
 .fa-desc {
 	border: 1px solid white;
 	border-radius: 5px;
@@ -104,6 +94,7 @@ section {
 	font-size: 175%;
 	height: 35px;
 	width: 35px;
+	padding-top: 2.5em;
 	-webkit-transition: all 0.3s ease-in-out;	
 	transition: all 0.3s ease-in-out;	
 }
@@ -372,9 +363,6 @@ section {
 /* - Designs - */
 
 /* - EXTRA - */
-#extra {
-	padding-bottom: 0em;
-}
 #extra a {
 	margin: 15px;
 }

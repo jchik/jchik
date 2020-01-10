@@ -22,10 +22,6 @@ document.documentElement.addEventListener('click', function(event) {
     if (event.target.matches('#project-modal') || event.target.matches('#modal-img')) {
         closeModal();
     }
-
-    if (event.target.matches('#sunrise') || event.target.matches('#svg-sun') || event.target.matches('#svg-sun-text')) {
-        startSunrise();
-    }
 });
 
 var textIndex = 0;
@@ -58,7 +54,7 @@ function scrolling() {
 
 function clickToTop() {
     document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function openModal(event) {
@@ -68,36 +64,4 @@ function openModal(event) {
 
 function closeModal() {
     document.getElementById('project-modal').style.display = "none";
-}
-
-var sunrise = false;
-function startSunrise() {
-    if (sunrise) {
-        resetSunrise();
-        return;
-    }
-    var sun = document.getElementById('svg-sun');
-    var text = document.getElementById('svg-sun-text');
-
-    sun.classList.add('rise');
-    setTimeout(function() {
-        sun.classList.add('spin');
-    }, 1000);
-    setTimeout(function() {
-        text.classList.add('display');
-    }, 2000);
-
-    sunrise = true;
-}
-
-function resetSunrise() {
-    var sun = document.getElementById('svg-sun');
-    var text = document.getElementById('svg-sun-text');
-
-    text.classList.remove('display');
-    setTimeout(function() {
-        sun.classList.remove('rise');
-        sun.classList.remove('spin');
-    }, 500);
-    sunrise = false;
 }
