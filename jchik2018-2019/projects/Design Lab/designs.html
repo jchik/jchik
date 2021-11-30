@@ -9,7 +9,7 @@
 	<meta name="description" content="Jonathan Chik">
 	<meta name="keywords" content="jonathan, chik, jonathan chik, jchik, github">
 	
-	<link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
 		crossorigin="anonymous">
@@ -23,14 +23,14 @@
 <body>
 	<header>
 		<nav>
-			<div class="nav-title"><a href="./designs.html">Design Lab</a></div>
+			<div class="nav-title"><a href="https://jchik.github.io/jchik/projects/Design Lab/designs">Design Lab</a></div>
 			<div class="nav-items">
 				<a onclick="scrollToSection('graphics')">Graphics</a>
 				<a onclick="scrollToSection('animation')">Animations</a>
 				<a onclick="scrollToSection('hover')">Hovers</a>
 				<a onclick="scrollToSection('images')">Images</a>
 			</div>
-			<div class="name"><a href="../../index.html">jchik</a></div>
+			<div class="name"><a href="https://jchik.github.io/jchik/">jchik</a></div>
 		</nav>
 	</header>
 	
@@ -45,17 +45,17 @@
 				<div class="logos">
 					<h4 class="text-centered">Logos</h4>
 					<div class="flexed-center">
-						<img src="../../assets/svg/chain.svg" alt="chain">
-						<img src="../../assets/svg/square-icon.svg" alt="square">
+						<img src="../../svg/chain.svg" alt="chain">
+						<img src="../../svg/square-icon.svg" alt="square">
 					</div>
 					<div class="flexed-center">
-						<img src="../../assets/svg/circle-icons.svg" alt="circles">
+						<img src="../../svg/circle-icons.svg" alt="circles">
 					</div>
 				</div>
 				<div id="infographs">
 					<h4 class="text-centered">Infographs</h4>
 					<div class="flexed-center">
-						<img src="../../assets/svg/infographic.svg" alt="infographic">
+						<img src="../../svg/infographic.svg" alt="infographic">
 					</div>
 				</div>
 			</div>
@@ -77,8 +77,8 @@
 						Design
 						<div class="words">
 							<div class="word">Graphics.</div>
-							<div class="word">Anything.</div>
 							<div class="word">Animations.</div>
+							<div class="word">Anything.</div>
 						</div>
 					</div>
 				</div>
@@ -170,25 +170,25 @@
 						</svg>
 					</div>
 					<div class="item-box">
-						<div class="shape-bounce">
-							<svg height="250" width="250">
-								<path id="bounce-path" d="M 0 100 Q 35 100 50 150 Q 88 85 125 150 Q 162 85 200 150 Q 215 100 250 100"
-									style="fill:none; stroke:white"></path>
-								<g>
-									<circle cx="50" cy="150" r="5"
-										style="fill:white"></circle>
-									<circle cx="125" cy="150" r="5"
-										style="fill:white"></circle>
-									<circle cx="200" cy="150" r="5"
-										style="fill:white"></circle>
-								</g>
-								<rect id="square-bouncer" x="0" y="95" height="10" width="10"
-									style="fill:white; stroke: none" transform="translate(-5, -105)"></rect>
-								<animateMotion xlink:href="#square-bouncer" dur="2s" repeatCount="indefinite">
-									<mpath xlink:href="#bounce-path"></mpath>
-								</animateMotion>
-							</svg>
-						</div>
+						<svg height="250" width="250">
+							<circle id="ripple" cx="125" cy="125" r="5px" 
+								style="fill:none; stroke:white; stroke-dasharray:0; stroke-linecap:round; stroke-width:2">
+							</circle>
+							<animate xlink:href="#ripple"
+								attributeName="r"
+								from="5px"
+								to="50px"
+								dur="2s"
+								repeatCount="indefinite">
+							</animate>
+							<animate xlink:href="#ripple"
+								attributeName="stroke-dasharray"
+								from="20"
+								to="20"
+								dur="2s"
+								repeatCount="indefinite">
+							</animate>					
+						</svg>
 					</div>
 				</div>
 				<div class="flexed-center">
@@ -241,6 +241,33 @@
 						</div>
 					</div>
 					<div class="item-box">
+						<div class="shape-bounce">
+							<svg height="250" width="250">
+								<path id="bounce-path" d="M 0 100 Q 35 100 50 150 Q 88 85 125 150 Q 162 85 200 150 Q 215 100 250 100"
+									style="fill:none; stroke:white"></path>
+								<g>
+									<circle cx="50" cy="150" r="5"
+										style="fill:white"></circle>
+									<circle cx="125" cy="150" r="5"
+										style="fill:white"></circle>
+									<circle cx="200" cy="150" r="5"
+										style="fill:white"></circle>
+								</g>
+								<rect id="square-bouncer" x="0" y="95" height="10" width="10"
+									style="fill:white; stroke: none"
+									transform="translate(0, -100)"></rect>
+								<animateMotion xlink:href="#square-bouncer" dur="3s" repeatCount="indefinite">
+									<mpath xlink:href="#bounce-path"></mpath>
+								</animateMotion>
+								<animate xlink:href="#square-bouncer"
+									attributeName="transform"
+									from="rotate(0) translate(0, -100)"
+									to="rotate(360) translate(0, -100)"
+									dur="3s"
+									repeatCount="indefinite">
+								</animate>
+							</svg>
+						</div>
 
 					</div>
 				</div>
@@ -404,13 +431,13 @@
 				<div id="tri-image-display-2">
 					<div class="images-container">
 						<div id="tri-left-container2" class="tri-image-container">
-							<img class="tri-image" src="../../assets/art/scene2.jpg">
+							<img class="tri-image" src="../../art/scene2.jpg">
 						</div>
 						<div id="tri-mid-container2" class="tri-image-container">
-							<img class="tri-image" src="../../assets/art/scene3.jpg">
+							<img class="tri-image" src="../../art/scene3.jpg">
 						</div>
 						<div id="tri-right-container2" class="tri-image-container">
-							<img class="tri-image" src="../../assets/art/scene4.jpg">
+							<img class="tri-image" src="../../art/scene4.jpg">
 						</div>
 					</div>
 				</div>
@@ -420,6 +447,17 @@
 
 	<footer>			
 		<div class="container">
+			<div id="socials" class="text-centered">
+				<a class="far fa-file" href="../../pdfs/Resume-Jonathan.Chik.pdf" target="_blank">
+					<span class="fa-desc">Resume</span>
+				</a>
+				<a class="fab fa-github" href="https://github.com/jchik" target="_blank">						
+					<span class="fa-desc">Github</span>
+				</a>
+				<a class="far fa-envelope" href="mailto:jonathanchik13@hotmail.com" target="_blank">
+					<span class="fa-desc">Email</span>							
+				</a>
+			</div>
 			<div class="text-centered">jonathanchik13@hotmail.com</div>
 		</div>
 	</footer>

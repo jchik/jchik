@@ -131,9 +131,7 @@ nav {
 }
 
 .word-carousel-horizontal {
-	border: 1px solid white;
 	display: flex;
-	height: 150px;
 	font-size: 36px;
 	font-weight: 900;
 	padding: 25px;
@@ -579,21 +577,6 @@ nav {
 	100% { transform: translate(0%, -100%); }
 }
 
-/* Bouncy Square */
-#bounce-path {
-	stroke-dasharray: 360;
-	stroke-dashoffset: 360;
-	animation: bounces 2s linear infinite;
-}
-@keyframes bounces {
-	from {
-		stroke-dashoffset: 400;
-	}
-	to {
-		stroke-dashoffset: 0;
-	}
-}
-
 .snowfall {
 	height: 100%;
 	width: 100%;
@@ -630,6 +613,7 @@ nav {
 		transform: translate(5%, 100%);
 	}
 }
+
 
 /* --- HOVER --- */
 /* UNDERLINES */
@@ -1011,7 +995,7 @@ nav {
 
 /* Text-Overlay */
 .text-overlay {
-	background: url(../../assets/art/scene.jpg);
+	background: url(../../art/scene.jpg);
 	-webkit-background-clip: text;
 	background-clip: text;
 	background-position: 20%;
@@ -1026,7 +1010,7 @@ nav {
 	width: 100%;
 }
 .text-overlay::before {
-	background: url(../../assets/art/scene.jpg);
+	background: url(../../art/scene.jpg);
 	background-position: 25%;
 	content: "";
 	height: 100%;
@@ -1056,7 +1040,7 @@ nav {
     width: 100%;
 }
 .scenery-image {
-    background-image: url("../../assets/art/scene.jpg");    
+    background-image: url("../../art/scene.jpg");    
     height: 100%;
 }
 .grey-filter {
@@ -1087,13 +1071,13 @@ nav {
     height: 100%;
 }
 .tri-left-bg {
-    background-image: url("../../assets/art/scene2.jpg");
+    background-image: url("../../art/scene2.jpg");
 }
 .tri-mid-bg {
-    background-image: url("../../assets/art/scene3.jpg");
+    background-image: url("../../art/scene3.jpg");
 }
 .tri-right-bg {
-    background-image: url("../../assets/art/scene4.jpg");
+    background-image: url("../../art/scene4.jpg");
 }
 
 /* Tri-Image-2 */

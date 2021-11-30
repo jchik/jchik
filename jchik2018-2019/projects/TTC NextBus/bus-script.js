@@ -12,7 +12,7 @@ var ttcModule = angular.module("ttc-app", []);
 ttcModule.controller("ttc-controller", function($scope, $interval) {
     $scope.busPredictionList = [];
     $scope.pinnedBusList = [];
-    var busStopList = {};
+	var busStopList = {};
 
     $scope.init = function() {
         if (typeof localStorage !== 'undefined') {
@@ -50,56 +50,56 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
     $(".stop-search").focusout(function () {
         $('#bus-stop-list').html("");
     });
+	
+	function getBusRoutes() {
+		var nextBusAPIbusRoute = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc";
+		var busRouteList = {};
 
-    function getBusRoutes() {
-        var nextBusAPIbusRoute = "http://webservices.nextbus.com/service/publicJSONFeed?command=routeList&a=ttc";
-        var busRouteList = {};
-    
-        $.getJSON(nextBusAPIbusRoute, function(data) {
-            $.each(data.route, function(key, value) {
-                busRouteList[value.tag] = value.title;
-             });
-             displayBusRoutes(busRouteList);
-        });
-    }
-    
-    function displayBusRoutes(busRouteList) {
-        var list;
-        for (var route in busRouteList) {
-            list += ('<option value="' + busRouteList[route] + '"></option>');
-        }
-        $('#bus-route-list').html(list);
-    }
-    
-    function getBusStops(search) {
-        var dashIndex = search.indexOf("-");
-        if (dashIndex != -1) {
-            search = search.substring(0,dashIndex);
-        }
-    
-        var nextBusAPIbusStops = "http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=ttc&r=" + search;
-        busStopList = {};
-    
-        $.getJSON(nextBusAPIbusStops, function(data) {
-            if (data.route != null) {
-                $.each(data.route.stop, function(key, value) {
-                    busStopList[value.tag] = value.title;
-                });
-                displayBusStops(busStopList);
-            }
-        });
-    }
-    
-    function displayBusStops(busStopList) {
-        var list;   
-        for (var stop in busStopList) {
-            list += ('<option value="' + stop + "-" + busStopList[stop] + '"></option>');
-        }
-        $('#bus-stop-list').html(list); 
-    }
+		$.getJSON(nextBusAPIbusRoute, function(data) {
+			$.each(data.route, function(key, value) {
+				busRouteList[value.tag] = value.title;
+			 });
+			 displayBusRoutes(busRouteList);
+		});
+	}
+
+	function displayBusRoutes(busRouteList) {
+		var list;
+		for (var route in busRouteList) {
+			list += ('<option value="' + busRouteList[route] + '"></option>');
+		}
+		$('#bus-route-list').html(list);
+	}
+
+	function getBusStops(search) {
+		var dashIndex = search.indexOf("-");
+		if (dashIndex != -1) {
+			search = search.substring(0,dashIndex);
+		}
+
+		var nextBusAPIbusStops = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=ttc&r=" + search;
+		busStopList = {};
+
+		$.getJSON(nextBusAPIbusStops, function(data) {
+			if (data.route != null) {
+				$.each(data.route.stop, function(key, value) {
+					busStopList[value.tag] = value.title;
+				});
+				displayBusStops(busStopList);
+			}
+		});
+	}
+
+	function displayBusStops(busStopList) {
+		var list;   
+		for (var stop in busStopList) {
+			list += ('<option value="' + stop + "-" + busStopList[stop] + '"></option>');
+		}
+		$('#bus-stop-list').html(list); 
+	}
 
     $scope.refreshBus = function(bus) {
-        var nextBusAPI = "http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + bus.routeNo + "&s=" + bus.stopNo;   
+        var nextBusAPI = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + bus.routeNo + "&s=" + bus.stopNo;   
         
         $.getJSON(nextBusAPI, function(data) {   
             var stopPredictionList = [];
@@ -132,9 +132,9 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
             for (var i=0; i<$scope.pinnedBusList.length; i++) {
                 if (bus === $scope.pinnedBusList[i]) {
                     $scope.pinnedBusList[i].stopList = stopPredictionList;
-                    if (typeof localStorage !== 'undefined') {
+					if (typeof localStorage !== 'undefined') {
                         localStorage.setItem("pinned", JSON.stringify($scope.pinnedBusList));
-                    }  
+                    }
                     $scope.$apply();
                 }
             }
@@ -160,7 +160,7 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
             stop = stop.substring(0,stopDash);
         }
 
-        var nextBusAPI = "http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + route + "&s=" + stop;   
+        var nextBusAPI = "https://cors-anywhere.herokuapp.com/http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=" + route + "&s=" + stop;   
     
         $.getJSON(nextBusAPI, function(data) {
             if (data.predictions == null) {
@@ -232,8 +232,8 @@ ttcModule.controller("ttc-controller", function($scope, $interval) {
             localStorage.setItem("pinned", JSON.stringify($scope.pinnedBusList));
         }  
     }
-
-    function setMessage(text) {
+	
+	function setMessage(text) {
         $('#messages').css('display','block');
         $('.message-text').html(text);
         setTimeout($scope.hideMessage, 10000);

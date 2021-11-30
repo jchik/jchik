@@ -1,0 +1,119 @@
+.navbar, footer {
+    display: none;
+}
+
+#project-header {
+    display: flex;
+    border-bottom: 3px solid white;
+    border-radius: 3px;
+    height: 30px;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+#messages {
+    background-color: white;
+    border-radius: 7px 7px 0px 0px;
+    color: black;
+    display: none;
+    font-weight: bold;
+    padding: 5px 25px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.message-close {
+    cursor: pointer;
+    padding: 0px 5px 0px 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#bus-search {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em 0em;
+}
+.bus-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.bus-form input {
+    border-radius: 5px;
+    margin: 0px 3px;
+}
+.route-search, .stop-search {
+    width: 100%;
+}
+
+.bus-pinned {
+    border: 1px solid white;
+    border-width: 2px 0px;
+    margin: 3px 0px;
+    padding: 5px 0px;
+    position: relative;
+}
+.divider {
+    padding: 15px 0px;
+}
+.bus-schedule {
+    border: 1px solid white;
+    border-width: 2px 0px;
+    margin: 3px 0px;
+    padding: 5px 0px;
+    position: relative;
+}
+.bus-prediction {
+    padding: 0;
+}
+.bus-toolbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bus-unpin, .bus-pin, .bus-refresh, .bus-close {
+    cursor: pointer;
+    padding: 5px 7px;
+}
+.bus-close {
+    font-size: 125%;
+    margin-top: -2%;
+}
+.bus-unpin:hover, .bus-pin:hover, .bus-refresh:hover, .bus-close:hover {
+    text-shadow: 0px 0px 5px cyan;
+}
+
+.bus-pinned .bus-refresh {
+    text-shadow: 0px 0px 5px #80ee80;
+    -webkit-animation: rotato 3s infinite;
+    animation: rotato 3s infinite;
+}
+@-webkit-keyframes rotato {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes rotato {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+/* - BOOTSTRAP - */
+/* ------------- */
+.row {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .bus-form {
+        flex-direction: column;
+    }
+    .bus-form input {
+        margin: 5px 0px;
+    }
+}

@@ -134,7 +134,7 @@ function currentweather() {
 				} catch (e) {}
 			}
 		}
-		
+	
 		request.onreadystatechange = function(){			
 			if (request.readyState == 4){
 				var jsonObj = JSON.parse(request.responseText);
